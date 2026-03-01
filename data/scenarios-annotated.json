@@ -1,0 +1,1065 @@
+[
+  {
+    "id": "s001",
+    "game_state": {
+      "hand": "Kc Qc",
+      "board": "Ac Jc 9h 2h",
+      "pot": 200.0,
+      "stack": 750.0,
+      "position": "BTN",
+      "street": "turn",
+      "villain_action": "bet 100"
+    },
+    "legal_actions": [
+      "fold",
+      "call",
+      "raise to 300"
+    ],
+    "solver_output": {
+      "recommended_action": "call",
+      "action_frequencies": {
+        "fold": 0.15,
+        "call": 0.55,
+        "raise to 300": 0.3
+      },
+      "equity": 0.34,
+      "pot_odds": "3:1",
+      "ev": 36.0
+    },
+    "reference_reasoning": "You have ~34% equity with a flush draw and an inside straight draw. Facing a half-pot bet (100 into 200), you are getting 3:1 pot odds (300 total pot / 100 call). Since your equity exceeds the 25% breakeven requirement, calling is +EV. Raising is also viable as a semi-bluff given your position and high equity.",
+    "required_concepts": [
+      "equity",
+      "pot odds",
+      "straight draw",
+      "flush draw",
+      "semi-bluff"
+    ],
+    "key_numbers": {
+      "equity": "34%",
+      "pot_odds": "3:1"
+    },
+    "contradiction_rules": [
+      "You should fold with 34% equity and 3:1 pot odds.",
+      "You have no outs on this board."
+    ]
+  },
+  {
+    "id": "s002",
+    "game_state": {
+      "hand": "Ah Qh",
+      "board": "8h 9h Jc 2d",
+      "pot": 100.0,
+      "stack": 200.0,
+      "position": "BB",
+      "street": "turn",
+      "villain_action": "bets 30"
+    },
+    "legal_actions": [
+      "fold",
+      "call",
+      "raise to 110"
+    ],
+    "solver_output": {
+      "recommended_action": "raise to 110",
+      "action_frequencies": {
+        "raise to 110": 0.6,
+        "call": 0.35,
+        "fold": 0.05
+      },
+      "equity": 0.3,
+      "pot_odds": "4.33:1",
+      "ev": 18.0
+    },
+    "reference_reasoning": "You hold the nut flush draw plus two overcards, giving you roughly 30% equity to improve on the river. Facing a small 30 bet into a 100 pot, the pot odds are 4.33:1 (130/30), making a call very profitable. However, raising to 110 is preferred as a semi-bluff to maximize fold equity and build a pot for your nut draw.",
+    "required_concepts": [
+      "flush draw",
+      "fold equity",
+      "pot odds",
+      "semi-bluff",
+      "implied odds"
+    ],
+    "key_numbers": {
+      "equity": "30%",
+      "pot_odds": "4.33:1",
+      "bet_size": "30",
+      "pot_before_bet": "100"
+    },
+    "contradiction_rules": [
+      "you have the nuts currently",
+      "equity is 100%",
+      "raising gives no fold equity"
+    ]
+  },
+  {
+    "id": "s003",
+    "game_state": {
+      "hand": "As 9s",
+      "board": "Kd Js 7s",
+      "pot": 200.0,
+      "stack": 600.0,
+      "position": "BTN",
+      "street": "flop",
+      "villain_action": "bet 100"
+    },
+    "legal_actions": [
+      "fold",
+      "call",
+      "raise to 300"
+    ],
+    "solver_output": {
+      "recommended_action": "call",
+      "action_frequencies": {
+        "fold": 0.0,
+        "call": 0.75,
+        "raise to 300": 0.25
+      },
+      "equity": 0.36,
+      "pot_odds": "3:1",
+      "ev": 44.0
+    },
+    "reference_reasoning": "On the flop with the nut flush draw, you have ~36% equity against a standard range with two cards to come. The villain's bet of 100 into 200 provides 3:1 pot odds. Calling is a high-EV play to realize equity in position, while raising can be used to balance your range with semi-bluffs.",
+    "required_concepts": [
+      "nut flush draw",
+      "pot odds",
+      "equity",
+      "stack-to-pot ratio (SPR)",
+      "fold equity"
+    ],
+    "key_numbers": {
+      "equity": "36%",
+      "pot_odds": "3:1",
+      "ev": "44"
+    },
+    "contradiction_rules": [
+      "you have a made flush currently",
+      "calling is mathematically losing here",
+      "the board has five cards already"
+    ]
+  },
+  {
+    "id": "s004",
+    "game_state": {
+      "hand": "Qc 7d",
+      "board": "Qh 9s 4d 2c 8h",
+      "pot": 200.0,
+      "stack": 250.0,
+      "position": "SB",
+      "street": "river",
+      "villain_action": "bets 120"
+    },
+    "legal_actions": [
+      "fold",
+      "call"
+    ],
+    "solver_output": {
+      "recommended_action": "fold",
+      "action_frequencies": {
+        "fold": 0.85,
+        "call": 0.15
+      },
+      "equity": 0.22,
+      "pot_odds": "2.67:1",
+      "ev": -10.0
+    },
+    "reference_reasoning": "On the river, you have top pair with a very weak kicker. Facing a 60% pot bet (120 into 200), you need ~27% equity to break even on a call. With only 22% equity against a typical betting range, folding is the correct play to preserve your stack.",
+    "required_concepts": [
+      "top pair",
+      "kicker",
+      "pot odds",
+      "river decision"
+    ],
+    "key_numbers": {
+      "equity": "22%",
+      "pot_odds": "2.67:1"
+    },
+    "contradiction_rules": [
+      "you have the absolute nuts",
+      "this is a clear call based on equity",
+      "you have a flush draw"
+    ]
+  },
+  {
+    "id": "s005",
+    "game_state": {
+      "hand": "As Ks",
+      "board": "",
+      "pot": 10.0,
+      "stack": 100.0,
+      "position": "UTG",
+      "street": "preflop",
+      "villain_action": "shoves for 30"
+    },
+    "legal_actions": [
+      "fold",
+      "call"
+    ],
+    "solver_output": {
+      "recommended_action": "call",
+      "action_frequencies": {
+        "call": 1.0,
+        "fold": 0.0
+      },
+      "equity": 0.55,
+      "pot_odds": "1.33:1",
+      "ev": 8.5
+    },
+    "reference_reasoning": "Against a short-stack shove for 30 into a 10 pot, you are getting 1.33:1 pot odds (40 to win 30). You need ~43% equity to call. With AKs, you have ~55% equity against a typical shoving range, making this a clear mathematical call.",
+    "required_concepts": [
+      "all-in shove",
+      "equity",
+      "pot odds",
+      "call vs fold decision"
+    ],
+    "key_numbers": {
+      "equity": "55%",
+      "pot_odds": "1.33:1"
+    },
+    "contradiction_rules": [
+      "you have 10% equity",
+      "pot odds are 5:1",
+      "this is a clear fold"
+    ]
+  },
+  {
+    "id": "s006",
+    "game_state": {
+      "hand": "7h 8h",
+      "board": "9h Th 2c",
+      "pot": 20.0,
+      "stack": 80.0,
+      "position": "BTN",
+      "street": "flop",
+      "villain_action": "checks"
+    },
+    "legal_actions": [
+      "check",
+      "bet 15"
+    ],
+    "solver_output": {
+      "recommended_action": "bet 15",
+      "action_frequencies": {
+        "bet 15": 0.7,
+        "check": 0.3
+      },
+      "equity": 0.54,
+      "pot_odds": "N/A",
+      "ev": 10.8
+    },
+    "reference_reasoning": "You have a powerful combo draw (flush draw + open-ended straight draw) with ~54% equity. After the villain checks, betting 75% pot builds the pot for when you hit and generates fold equity. This is a classic semi-bluff with significant equity to win even if called.",
+    "required_concepts": [
+      "flush draw",
+      "open-ended straight draw",
+      "semi-bluff",
+      "fold equity"
+    ],
+    "key_numbers": {
+      "equity": "54%",
+      "pot_odds": "N/A"
+    },
+    "contradiction_rules": [
+      "you have a made flush",
+      "there are no outs to a straight",
+      "betting has zero fold equity"
+    ]
+  },
+  {
+    "id": "s007",
+    "game_state": {
+      "hand": "Qs Qd",
+      "board": "Qh 9d 2c 9s Jc",
+      "pot": 60.0,
+      "stack": 120.0,
+      "position": "BB",
+      "street": "river",
+      "villain_action": "bets 25"
+    },
+    "legal_actions": [
+      "fold",
+      "call",
+      "raise to 80"
+    ],
+    "solver_output": {
+      "recommended_action": "raise to 80",
+      "action_frequencies": {
+        "raise to 80": 0.9,
+        "call": 0.1,
+        "fold": 0.0
+      },
+      "equity": 1.0,
+      "pot_odds": "3.4:1",
+      "ev": 110.0
+    },
+    "reference_reasoning": "You have the absolute nuts (Queens full of Nines). No other hand can beat you given the board and your holdings. Facing a small bet, you must raise for value. Folding is impossible, and calling misses significant value from worse full houses or 9x hands.",
+    "required_concepts": [
+      "full house",
+      "value raise",
+      "the nuts",
+      "pot odds"
+    ],
+    "key_numbers": {
+      "equity": "100%",
+      "pot_odds": "3.4:1"
+    },
+    "contradiction_rules": [
+      "you are behind",
+      "folding is a viable option",
+      "this is only a single pair"
+    ]
+  },
+  {
+    "id": "s008",
+    "game_state": {
+      "hand": "Kc Ks",
+      "board": "",
+      "pot": 40.0,
+      "stack": 120.0,
+      "position": "BTN",
+      "street": "preflop",
+      "villain_action": "shoves for 20"
+    },
+    "legal_actions": [
+      "fold",
+      "call"
+    ],
+    "solver_output": {
+      "recommended_action": "call",
+      "action_frequencies": {
+        "call": 1.0,
+        "fold": 0.0
+      },
+      "equity": 0.78,
+      "pot_odds": "3:1",
+      "ev": 42.4
+    },
+    "reference_reasoning": "With pocket kings, you are a 78% favorite against a typical short-stack shoving range. You are getting 3:1 pot odds (60 to win 20), requiring only 25% equity. This is an mandatory call preflop to realize your massive value.",
+    "required_concepts": [
+      "made hand",
+      "equity",
+      "pot odds",
+      "call vs shove"
+    ],
+    "key_numbers": {
+      "equity": "78%",
+      "pot_odds": "3:1"
+    },
+    "contradiction_rules": [
+      "you are an underdog",
+      "folding is +EV",
+      "calling is a break-even play"
+    ]
+  },
+  {
+    "id": "s009",
+    "game_state": {
+      "hand": "Qh Jh",
+      "board": "Th 9h 3c",
+      "pot": 50.0,
+      "stack": 100.0,
+      "position": "SB",
+      "street": "flop",
+      "villain_action": "bets 25"
+    },
+    "legal_actions": [
+      "fold",
+      "call",
+      "raise to 85"
+    ],
+    "solver_output": {
+      "recommended_action": "raise to 85",
+      "action_frequencies": {
+        "raise to 85": 0.65,
+        "call": 0.3,
+        "fold": 0.05
+      },
+      "equity": 0.56,
+      "pot_odds": "3:1",
+      "ev": 31.0
+    },
+    "reference_reasoning": "You have a massive draw with a flush draw + OESD (~56% equity with two to come). Facing a half-pot bet, you have the direct odds to call, but raising as a semi-bluff is preferred to maximize fold equity and build the pot for your strong draw.",
+    "required_concepts": [
+      "nut flush draw",
+      "open-ended straight draw",
+      "pot odds",
+      "semi-bluff",
+      "fold equity"
+    ],
+    "key_numbers": {
+      "equity": "56%",
+      "pot_odds": "3:1"
+    },
+    "contradiction_rules": [
+      "you have no draw",
+      "you are only a 20% favorite",
+      "folding is the best play"
+    ]
+  },
+  {
+    "id": "s010",
+    "game_state": {
+      "hand": "5h 5d",
+      "board": "Ah 5s Tc 2d 9c",
+      "pot": 200.0,
+      "stack": 500.0,
+      "position": "CO",
+      "street": "river",
+      "villain_action": "bets 80"
+    },
+    "legal_actions": [
+      "fold",
+      "call",
+      "raise to 240"
+    ],
+    "solver_output": {
+      "recommended_action": "call",
+      "action_frequencies": {
+        "call": 0.8,
+        "raise to 240": 0.2,
+        "fold": 0.0
+      },
+      "equity": 0.85,
+      "pot_odds": "3.5:1",
+      "ev": 226.0
+    },
+    "reference_reasoning": "You have trip fives on a dry board. With 85% equity, you are almost certainly ahead. While a raise can extract thin value from two-pair, calling keeps the villain's bluffs in and realizes your value safely against a range that may have Ace-x.",
+    "required_concepts": [
+      "made hand",
+      "value bet",
+      "pot odds",
+      "equity",
+      "thin value"
+    ],
+    "key_numbers": {
+      "equity": "85%",
+      "pot_odds": "3.5:1"
+    },
+    "contradiction_rules": [
+      "you are drawing to a flush",
+      "folding is better than calling",
+      "equity is only 30%"
+    ]
+  },
+  {
+    "id": "s011",
+    "game_state": {
+      "hand": "As Kh",
+      "board": "",
+      "pot": 3.0,
+      "stack": 36.0,
+      "position": "BTN",
+      "street": "preflop",
+      "villain_action": "opens to 9"
+    },
+    "legal_actions": [
+      "fold",
+      "call",
+      "raise to 36"
+    ],
+    "solver_output": {
+      "recommended_action": "raise to 36",
+      "action_frequencies": {
+        "raise to 36": 0.7,
+        "call": 0.2,
+        "fold": 0.1
+      },
+      "equity": 0.68,
+      "pot_odds": "1.33:1",
+      "ev": 12.0
+    },
+    "reference_reasoning": "In position with AKo, you have a strong range advantage. Facing a large 3x open, you should 3-bet (raise to 36, all-in in this case) to leverage your equity and position. This denies equity to the villain's weaker hands and maximizes your value.",
+    "required_concepts": [
+      "position",
+      "domination",
+      "pot odds"
+    ],
+    "key_numbers": {
+      "equity": "68%",
+      "pot_odds": "1.33:1"
+    },
+    "contradiction_rules": [
+      "we are drawing dead preflop",
+      "no fold equity exists"
+    ]
+  },
+  {
+    "id": "s012",
+    "game_state": {
+      "hand": "Ad Jd",
+      "board": "Kd 9d 3c",
+      "pot": 50.0,
+      "stack": 150.0,
+      "position": "SB",
+      "street": "flop",
+      "villain_action": "checks"
+    },
+    "legal_actions": [
+      "check",
+      "bet 35"
+    ],
+    "solver_output": {
+      "recommended_action": "bet 35",
+      "action_frequencies": {
+        "bet 35": 0.7,
+        "check": 0.3
+      },
+      "equity": 0.45,
+      "pot_odds": "N/A",
+      "ev": 22.5
+    },
+    "reference_reasoning": "You have the nut flush draw and one overcard (~45% equity). Betting after a check takes initiative as a semi-bluff. If you hit, you have the nuts; if called, you still have significant equity to improve on later streets.",
+    "required_concepts": [
+      "flush draw",
+      "semi-bluff",
+      "fold equity",
+      "overcard"
+    ],
+    "key_numbers": {
+      "equity": "45%",
+      "pot_odds": "N/A"
+    },
+    "contradiction_rules": [
+      "we have a made flush",
+      "we are drawing dead"
+    ]
+  },
+  {
+    "id": "s013",
+    "game_state": {
+      "hand": "Qh Js",
+      "board": "Kc 7d 4s 2h",
+      "pot": 40.0,
+      "stack": 80.0,
+      "position": "BB",
+      "street": "turn",
+      "villain_action": "bets 20"
+    },
+    "legal_actions": [
+      "fold",
+      "call"
+    ],
+    "solver_output": {
+      "recommended_action": "fold",
+      "action_frequencies": {
+        "fold": 0.95,
+        "call": 0.05
+      },
+      "equity": 0.08,
+      "pot_odds": "3:1",
+      "ev": -13.6
+    },
+    "reference_reasoning": "You have no pair and no draw on the turn. With only 8% equity against a king-high range, you are nowhere near the 25% needed to call a half-pot bet. Folding is the only viable play to stop bleeding chips.",
+    "required_concepts": [
+      "pot odds",
+      "marginal made hand",
+      "range advantage"
+    ],
+    "key_numbers": {
+      "equity": "8%",
+      "pot_odds": "3:1"
+    },
+    "contradiction_rules": [
+      "we have the nuts",
+      "equity is 50%"
+    ]
+  },
+  {
+    "id": "s015",
+    "game_state": {
+      "hand": "Qh Th",
+      "board": "Jc Tc 9c 2d",
+      "pot": 75.0,
+      "stack": 150.0,
+      "position": "MP",
+      "street": "turn",
+      "villain_action": "bets 40"
+    },
+    "legal_actions": [
+      "fold",
+      "call",
+      "raise to 120"
+    ],
+    "solver_output": {
+      "recommended_action": "call",
+      "action_frequencies": {
+        "call": 0.6,
+        "fold": 0.35,
+        "raise to 120": 0.05
+      },
+      "equity": 0.42,
+      "pot_odds": "2.88:1",
+      "ev": 25.1
+    },
+    "reference_reasoning": "You have middle pair (Tens) plus an open-ended straight draw (K or 8). Your ~42% equity justifies a call given the 2.88:1 pot odds. Raising is too risky on this connected board as it isolates you against flushes or better straights.",
+    "required_concepts": [
+      "blocker",
+      "middle pair",
+      "open-ended straight draw",
+      "pot odds"
+    ],
+    "key_numbers": {
+      "equity": "42%",
+      "pot_odds": "2.88:1"
+    },
+    "contradiction_rules": [
+      "we have the nut flush",
+      "no straight draw exists"
+    ]
+  },
+  {
+    "id": "s016",
+    "game_state": {
+      "hand": "9h 6h",
+      "board": "Kh 8h 5c 7h",
+      "pot": 150.0,
+      "stack": 60.0,
+      "position": "BTN",
+      "street": "turn",
+      "villain_action": "bets 50"
+    },
+    "legal_actions": [
+      "fold",
+      "call",
+      "raise to 60"
+    ],
+    "solver_output": {
+      "recommended_action": "raise to 60",
+      "action_frequencies": {
+        "raise to 60": 0.8,
+        "call": 0.2,
+        "fold": 0.0
+      },
+      "equity": 0.78,
+      "pot_odds": "4:1",
+      "ev": 189.6
+    },
+    "reference_reasoning": "You have a made flush. With the stack-to-pot ratio (SPR) very low, you should commit your remaining 60 chips immediately. You have 78% equity and want to extract value from sets or worse flushes before any fourth heart kills the action.",
+    "required_concepts": [
+      "flush",
+      "pot odds",
+      "stack-to-pot ratio",
+      "value extraction"
+    ],
+    "key_numbers": {
+      "equity": "78%",
+      "pot_odds": "4:1"
+    },
+    "contradiction_rules": [
+      "you have no flush",
+      "this is the river street"
+    ]
+  },
+  {
+    "id": "s026",
+    "game_state": {
+      "hand": "Ah Kh",
+      "board": "",
+      "pot": 3.0,
+      "stack": 200.0,
+      "position": "BTN",
+      "street": "preflop",
+      "villain_action": "opens to 3"
+    },
+    "legal_actions": [
+      "fold",
+      "call",
+      "raise to 10"
+    ],
+    "solver_output": {
+      "recommended_action": "raise to 10",
+      "action_frequencies": {
+        "fold": 0.0,
+        "call": 0.1,
+        "raise to 10": 0.9
+      },
+      "equity": 0.66,
+      "pot_odds": "2:1",
+      "ev": 8.5
+    },
+    "reference_reasoning": "AKs is a premium hand. Facing a min-open, a 3-bet is standard to build the pot and leverage your position. You have 66% equity against a standard opening range and should play aggressively to realize your value.",
+    "required_concepts": [
+      "preflop raise",
+      "equity",
+      "fold equity",
+      "position advantage"
+    ],
+    "key_numbers": {
+      "equity": "66%",
+      "pot_odds": "2:1"
+    },
+    "contradiction_rules": [
+      "must always fold AKs preflop",
+      "this is a nut flush currently"
+    ]
+  },
+  {
+    "id": "s017",
+    "game_state": {
+      "hand": "9h 8h",
+      "board": "Ts Jh 2d",
+      "pot": 24.0,
+      "stack": 100.0,
+      "position": "CO",
+      "street": "flop",
+      "villain_action": "checks"
+    },
+    "legal_actions": [
+      "check",
+      "bet 16"
+    ],
+    "solver_output": {
+      "recommended_action": "bet 16",
+      "action_frequencies": {
+        "check": 0.3,
+        "bet 16": 0.7
+      },
+      "equity": 0.44,
+      "pot_odds": "N/A",
+      "ev": 10.5
+    },
+    "reference_reasoning": "You have an open-ended straight draw plus backdoor hearts (~44% equity). Betting 2/3 pot as a semi-bluff is the best play to win the pot immediately or build it for when you hit your straight.",
+    "required_concepts": [
+      "open-ended straight draw",
+      "backdoor flush",
+      "fold equity"
+    ],
+    "key_numbers": {
+      "equity": "44%",
+      "pot_odds": "N/A"
+    },
+    "contradiction_rules": [
+      "no outs available",
+      "instant fold recommended"
+    ]
+  },
+  {
+    "id": "s018",
+    "game_state": {
+      "hand": "Qs Qc",
+      "board": "Kd Qh 5s 2c",
+      "pot": 60.0,
+      "stack": 80.0,
+      "position": "SB",
+      "street": "turn",
+      "villain_action": "bets 20"
+    },
+    "legal_actions": [
+      "fold",
+      "call",
+      "raise to 80"
+    ],
+    "solver_output": {
+      "recommended_action": "call",
+      "action_frequencies": {
+        "fold": 0.0,
+        "call": 0.85,
+        "raise to 80": 0.15
+      },
+      "equity": 0.78,
+      "pot_odds": "4:1",
+      "ev": 58.0
+    },
+    "reference_reasoning": "You have middle set (Queens) with 78% equity. Calling the small 1/3 pot bet is ideal to keep the villain's bluffs in, given the shallow stacks. You can easily commit the rest of the chips on the river.",
+    "required_concepts": [
+      "value extraction",
+      "pot odds",
+      "set value",
+      "polarized range"
+    ],
+    "key_numbers": {
+      "equity": "78%",
+      "pot_odds": "4:1"
+    },
+    "contradiction_rules": [
+      "you should fold middle set here",
+      "pot odds are 1:1"
+    ]
+  },
+  {
+    "id": "s019",
+    "game_state": {
+      "hand": "Ac 5c",
+      "board": "9c 7c 2c 4d",
+      "pot": 40.0,
+      "stack": 120.0,
+      "position": "BTN",
+      "street": "turn",
+      "villain_action": "checks"
+    },
+    "legal_actions": [
+      "check",
+      "bet 30"
+    ],
+    "solver_output": {
+      "recommended_action": "bet 30",
+      "action_frequencies": {
+        "check": 0.0,
+        "bet 30": 1.0
+      },
+      "equity": 1.0,
+      "pot_odds": "N/A",
+      "ev": 70.0
+    },
+    "reference_reasoning": "You have the absolute nuts (Ace-high flush on an unpaired board). You must bet for value after the check to extract from worse flushes or sets. Checking back the nuts on the turn is a massive value loss.",
+    "required_concepts": [
+      "nut flush",
+      "value betting",
+      "board texture"
+    ],
+    "key_numbers": {
+      "equity": "100%",
+      "pot_odds": "N/A"
+    },
+    "contradiction_rules": [
+      "no flush possible",
+      "must check the nuts"
+    ]
+  },
+  {
+    "id": "s020",
+    "game_state": {
+      "hand": "Td 7c",
+      "board": "Ts 9d 8h Jc 3s",
+      "pot": 50.0,
+      "stack": 50.0,
+      "position": "BB",
+      "street": "river",
+      "villain_action": "bets 20"
+    },
+    "legal_actions": [
+      "fold",
+      "call"
+    ],
+    "solver_output": {
+      "recommended_action": "fold",
+      "action_frequencies": {
+        "fold": 0.9,
+        "call": 0.1
+      },
+      "equity": 0.1,
+      "pot_odds": "3.5:1",
+      "ev": -11.0
+    },
+    "reference_reasoning": "You have top pair on a 4-straight board. Any Queen or 7 beats you. With only 10% equity, you cannot call a 20 bet even with 3.5:1 odds. This is a clear fold on a highly coordinated river board.",
+    "required_concepts": [
+      "kicker",
+      "river value",
+      "showdown equity",
+      "pot odds"
+    ],
+    "key_numbers": {
+      "equity": "10%",
+      "pot_odds": "3.5:1"
+    },
+    "contradiction_rules": [
+      "you have the nut straight",
+      "guaranteed chop"
+    ]
+  },
+  {
+    "id": "s021",
+    "game_state": {
+      "hand": "Jd Th",
+      "board": "Qs 8s 3c",
+      "pot": 18.0,
+      "stack": 30.0,
+      "position": "MP",
+      "street": "flop",
+      "villain_action": "bets 12"
+    },
+    "legal_actions": [
+      "fold",
+      "call",
+      "raise to 30"
+    ],
+    "solver_output": {
+      "recommended_action": "call",
+      "action_frequencies": {
+        "fold": 0.1,
+        "call": 0.85,
+        "raise to 30": 0.05
+      },
+      "equity": 0.36,
+      "pot_odds": "2.5:1",
+      "ev": 3.1
+    },
+    "reference_reasoning": "You have an open-ended straight draw (~36% equity). Facing a 2/3 pot bet, you have the odds to continue. Calling is preferred to realize your equity, especially given the short stacks where hitting your straight will likely result in the villain going all-in.",
+    "required_concepts": [
+      "open-ended straight draw",
+      "equity realization",
+      "pot odds"
+    ],
+    "key_numbers": {
+      "equity": "36%",
+      "pot_odds": "2.5:1"
+    },
+    "contradiction_rules": [
+      "no outs for a straight",
+      "must shove immediately"
+    ]
+  },
+  {
+    "id": "s022",
+    "game_state": {
+      "hand": "Kc Qc",
+      "board": "Kd 9c 6c 2h 4s",
+      "pot": 80.0,
+      "stack": 150.0,
+      "position": "UTG",
+      "street": "river",
+      "villain_action": "checks"
+    },
+    "legal_actions": [
+      "check",
+      "bet 55"
+    ],
+    "solver_output": {
+      "recommended_action": "bet 55",
+      "action_frequencies": {
+        "check": 0.3,
+        "bet 55": 0.7
+      },
+      "equity": 0.82,
+      "pot_odds": "N/A",
+      "ev": 45.1
+    },
+    "reference_reasoning": "You have top pair with a strong kicker. After the villain checks the river, a value bet is standard. You are likely ahead of their checking range, which includes weaker kings and missed club draws.",
+    "required_concepts": [
+      "blocker effects",
+      "thin value bet",
+      "river strategy"
+    ],
+    "key_numbers": {
+      "equity": "82%",
+      "pot_odds": "N/A"
+    },
+    "contradiction_rules": [
+      "no blockers present",
+      "all bets are bluffs here"
+    ]
+  },
+  {
+    "id": "s023",
+    "game_state": {
+      "hand": "7s 7d",
+      "board": "9h 9d 2c",
+      "pot": 20.0,
+      "stack": 60.0,
+      "position": "SB",
+      "street": "flop",
+      "villain_action": "bets 12"
+    },
+    "legal_actions": [
+      "fold",
+      "call",
+      "raise to 40"
+    ],
+    "solver_output": {
+      "recommended_action": "call",
+      "action_frequencies": {
+        "fold": 0.15,
+        "call": 0.7,
+        "raise to 40": 0.15
+      },
+      "equity": 0.41,
+      "pot_odds": "2.67:1",
+      "ev": 6.1
+    },
+    "reference_reasoning": "You have a pocket pair below the board pair. Facing a 12 bet into 20, you get 2.67:1 odds. Your 41% equity is sufficient to call. Raising is also an option for protection against overcards, but calling is standard to keep the range wide.",
+    "required_concepts": [
+      "protection",
+      "fold equity",
+      "paired board"
+    ],
+    "key_numbers": {
+      "equity": "41%",
+      "pot_odds": "2.67:1"
+    },
+    "contradiction_rules": [
+      "instant fold mandatory",
+      "guaranteed win here"
+    ]
+  },
+  {
+    "id": "s024",
+    "game_state": {
+      "hand": "Kd Js",
+      "board": "Ah 6h 4d 3c",
+      "pot": 15.0,
+      "stack": 25.0,
+      "position": "MP",
+      "street": "turn",
+      "villain_action": "bets 10"
+    },
+    "legal_actions": [
+      "fold",
+      "call"
+    ],
+    "solver_output": {
+      "recommended_action": "fold",
+      "action_frequencies": {
+        "fold": 1.0,
+        "call": 0.0
+      },
+      "equity": 0.05,
+      "pot_odds": "2.5:1",
+      "ev": -8.2
+    },
+    "reference_reasoning": "With no pair and no draw on an Ace-high board, your 5% equity is far too low to call a 2/3 pot bet. Folding is the only correct play; calling would be a massive mathematical error.",
+    "required_concepts": [
+      "fold",
+      "value range",
+      "short stack decision",
+      "pot odds"
+    ],
+    "key_numbers": {
+      "equity": "5%",
+      "pot_odds": "2.5:1"
+    },
+    "contradiction_rules": [
+      "must call every barrel",
+      "nut hand held"
+    ]
+  },
+  {
+    "id": "s025",
+    "game_state": {
+      "hand": "As Kh",
+      "board": "Ah Kd 9c 4s 2d",
+      "pot": 200.0,
+      "stack": 1200.0,
+      "position": "BTN",
+      "street": "river",
+      "villain_action": "bets 150"
+    },
+    "legal_actions": [
+      "fold",
+      "call",
+      "raise to 450"
+    ],
+    "solver_output": {
+      "recommended_action": "call",
+      "action_frequencies": {
+        "fold": 0.0,
+        "call": 0.9,
+        "raise to 450": 0.1
+      },
+      "equity": 0.68,
+      "pot_odds": "2.33:1",
+      "ev": 190.0
+    },
+    "reference_reasoning": "You have top two pair on the river. Facing a 150 bet, you are getting 2.33:1 pot odds. With 68% equity, calling is highly profitable. Raising is risky as it targets a narrow range of worse hands and may get you shoved on by sets.",
+    "required_concepts": [
+      "pot odds",
+      "blockers",
+      "two pair",
+      "river decision"
+    ],
+    "key_numbers": {
+      "equity": "68%",
+      "pot_odds": "2.33:1"
+    },
+    "contradiction_rules": [
+      "board is monotone",
+      "you have a flush"
+    ]
+  }
+]

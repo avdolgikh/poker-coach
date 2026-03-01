@@ -1,0 +1,1668 @@
+[
+  {
+    "id": "s001",
+    "game_state": {
+      "hand": "Kh Qh",
+      "board": "Ah Th 9h 2c 3d",
+      "pot": 120.0,
+      "stack": 200.0,
+      "position": "SB",
+      "street": "river",
+      "villain_action": "checks"
+    },
+    "legal_actions": [
+      "check",
+      "bet 80"
+    ],
+    "solver_output": {
+      "recommended_action": "bet 80",
+      "action_frequencies": {
+        "check": 0.0,
+        "bet 80": 1.0
+      },
+      "equity": 1.0,
+      "pot_odds": "N/A",
+      "ev": 180.0
+    }
+  },
+  {
+    "id": "s002",
+    "game_state": {
+      "hand": "Ah Kh",
+      "board": "",
+      "pot": 3.0,
+      "stack": 300.0,
+      "position": "UTG",
+      "street": "preflop",
+      "villain_action": "raises to 12"
+    },
+    "legal_actions": [
+      "fold",
+      "call 12",
+      "raise to 36"
+    ],
+    "solver_output": {
+      "recommended_action": "raise to 36",
+      "action_frequencies": {
+        "fold": 0.0,
+        "call 12": 0.2,
+        "raise to 36": 0.8
+      },
+      "equity": 0.67,
+      "pot_odds": "1.25:1",
+      "ev": 18.5
+    }
+  },
+  {
+    "id": "s003",
+    "game_state": {
+      "hand": "7c 7d",
+      "board": "",
+      "pot": 3.0,
+      "stack": 40.0,
+      "position": "SB",
+      "street": "preflop",
+      "villain_action": "raises to 10"
+    },
+    "legal_actions": [
+      "fold",
+      "call 10",
+      "raise to 40"
+    ],
+    "solver_output": {
+      "recommended_action": "call 10",
+      "action_frequencies": {
+        "fold": 0.2,
+        "call 10": 0.75,
+        "raise to 40": 0.05
+      },
+      "equity": 0.56,
+      "pot_odds": "1.30:1",
+      "ev": 4.2
+    }
+  },
+  {
+    "id": "s004",
+    "game_state": {
+      "hand": "Ah Qc",
+      "board": "Ts 7d 2c",
+      "pot": 18.0,
+      "stack": 120.0,
+      "position": "CO",
+      "street": "flop",
+      "villain_action": "checks"
+    },
+    "legal_actions": [
+      "check",
+      "bet 12"
+    ],
+    "solver_output": {
+      "recommended_action": "check",
+      "action_frequencies": {
+        "check": 0.85,
+        "bet 12": 0.15
+      },
+      "equity": 0.22,
+      "pot_odds": "N/A",
+      "ev": 0.8
+    }
+  },
+  {
+    "id": "s005",
+    "game_state": {
+      "hand": "Jc Tc",
+      "board": "9c 8d 2s",
+      "pot": 40.0,
+      "stack": 80.0,
+      "position": "MP",
+      "street": "flop",
+      "villain_action": "bets 20"
+    },
+    "legal_actions": [
+      "fold",
+      "call 20",
+      "raise to 60"
+    ],
+    "solver_output": {
+      "recommended_action": "call 20",
+      "action_frequencies": {
+        "fold": 0.05,
+        "call 20": 0.7,
+        "raise to 60": 0.25
+      },
+      "equity": 0.34,
+      "pot_odds": "3:1",
+      "ev": 6.0
+    }
+  },
+  {
+    "id": "s006",
+    "game_state": {
+      "hand": "Kh Kc",
+      "board": "Kd 7s 2h 4c",
+      "pot": 100.0,
+      "stack": 300.0,
+      "position": "BB",
+      "street": "turn",
+      "villain_action": "bets 75"
+    },
+    "legal_actions": [
+      "fold",
+      "call 75",
+      "raise to 225"
+    ],
+    "solver_output": {
+      "recommended_action": "raise to 225",
+      "action_frequencies": {
+        "fold": 0.0,
+        "call 75": 0.3,
+        "raise to 225": 0.7
+      },
+      "equity": 0.98,
+      "pot_odds": "2.33:1",
+      "ev": 142.0
+    }
+  },
+  {
+    "id": "s007",
+    "game_state": {
+      "hand": "Ah 9h",
+      "board": "Kh 7h 2s 4c",
+      "pot": 60.0,
+      "stack": 120.0,
+      "position": "SB",
+      "street": "turn",
+      "villain_action": "bets 40"
+    },
+    "legal_actions": [
+      "fold",
+      "call 40",
+      "raise to 120"
+    ],
+    "solver_output": {
+      "recommended_action": "call 40",
+      "action_frequencies": {
+        "fold": 0.15,
+        "call 40": 0.6,
+        "raise to 120": 0.25
+      },
+      "equity": 0.19,
+      "pot_odds": "2.5:1",
+      "ev": 2.1
+    }
+  },
+  {
+    "id": "s008",
+    "game_state": {
+      "hand": "Qc Qd",
+      "board": "Qh 9c 4s 2d 7d",
+      "pot": 120.0,
+      "stack": 400.0,
+      "position": "MP",
+      "street": "river",
+      "villain_action": "bets 120"
+    },
+    "legal_actions": [
+      "fold",
+      "call 120",
+      "raise to 400"
+    ],
+    "solver_output": {
+      "recommended_action": "call 120",
+      "action_frequencies": {
+        "fold": 0.0,
+        "call 120": 0.85,
+        "raise to 400": 0.15
+      },
+      "equity": 0.95,
+      "pot_odds": "2:1",
+      "ev": 102.0
+    }
+  },
+  {
+    "id": "s009",
+    "game_state": {
+      "hand": "5c 4c",
+      "board": "Ah Kh Qc Tc 2d",
+      "pot": 80.0,
+      "stack": 220.0,
+      "position": "CO",
+      "street": "river",
+      "villain_action": "bets 50"
+    },
+    "legal_actions": [
+      "fold",
+      "call 50"
+    ],
+    "solver_output": {
+      "recommended_action": "fold",
+      "action_frequencies": {
+        "fold": 1.0,
+        "call 50": 0.0
+      },
+      "equity": 0.0,
+      "pot_odds": "2.6:1",
+      "ev": 0.0
+    }
+  },
+  {
+    "id": "s010",
+    "game_state": {
+      "hand": "Ad Kd",
+      "board": "Qd Jd 3s",
+      "pot": 40.0,
+      "stack": 150.0,
+      "position": "BB",
+      "street": "flop",
+      "villain_action": "bets 30"
+    },
+    "legal_actions": [
+      "fold",
+      "call 30",
+      "raise to 110"
+    ],
+    "solver_output": {
+      "recommended_action": "raise to 110",
+      "action_frequencies": {
+        "fold": 0.05,
+        "call 30": 0.35,
+        "raise to 110": 0.6
+      },
+      "equity": 0.35,
+      "pot_odds": "2.33:1",
+      "ev": 10.5
+    }
+  },
+  {
+    "id": "s011",
+    "game_state": {
+      "hand": "3s 2s",
+      "board": "",
+      "pot": 3.0,
+      "stack": 150.0,
+      "position": "BTN",
+      "street": "preflop",
+      "villain_action": "raises to 8"
+    },
+    "legal_actions": [
+      "fold",
+      "call 8",
+      "raise to 24"
+    ],
+    "solver_output": {
+      "recommended_action": "fold",
+      "action_frequencies": {
+        "fold": 0.9,
+        "call 8": 0.05,
+        "raise to 24": 0.05
+      },
+      "equity": 0.32,
+      "pot_odds": "1.38:1",
+      "ev": -2.0
+    }
+  },
+  {
+    "id": "s012",
+    "game_state": {
+      "hand": "Ks Kc",
+      "board": "Qc 9s 2d",
+      "pot": 30.0,
+      "stack": 60.0,
+      "position": "SB",
+      "street": "flop",
+      "villain_action": "checks"
+    },
+    "legal_actions": [
+      "check",
+      "bet 20"
+    ],
+    "solver_output": {
+      "recommended_action": "bet 20",
+      "action_frequencies": {
+        "check": 0.3,
+        "bet 20": 0.7
+      },
+      "equity": 0.85,
+      "pot_odds": "N/A",
+      "ev": 22.0
+    }
+  },
+  {
+    "id": "s013",
+    "game_state": {
+      "hand": "Kh Qh",
+      "board": "Kc 9d 3h 5s 2d",
+      "pot": 60.0,
+      "stack": 120.0,
+      "position": "BTN",
+      "street": "river",
+      "villain_action": "checks"
+    },
+    "legal_actions": [
+      "check",
+      "bet 40"
+    ],
+    "solver_output": {
+      "recommended_action": "check",
+      "action_frequencies": {
+        "check": 0.8,
+        "bet 40": 0.2
+      },
+      "equity": 0.88,
+      "pot_odds": "N/A",
+      "ev": 52.8
+    }
+  },
+  {
+    "id": "s014",
+    "game_state": {
+      "hand": "Ah Jh",
+      "board": "Th 9h 2c",
+      "pot": 60.0,
+      "stack": 120.0,
+      "position": "CO",
+      "street": "flop",
+      "villain_action": "bets 40"
+    },
+    "legal_actions": [
+      "fold",
+      "call 40",
+      "raise to 120"
+    ],
+    "solver_output": {
+      "recommended_action": "call 40",
+      "action_frequencies": {
+        "fold": 0.1,
+        "call 40": 0.8,
+        "raise to 120": 0.1
+      },
+      "equity": 0.36,
+      "pot_odds": "2.5:1",
+      "ev": 5.5
+    }
+  },
+  {
+    "id": "s015",
+    "game_state": {
+      "hand": "9c 9d",
+      "board": "9h 2d 9s",
+      "pot": 30.0,
+      "stack": 80.0,
+      "position": "BB",
+      "street": "flop",
+      "villain_action": "bets 20"
+    },
+    "legal_actions": [
+      "fold",
+      "call 20",
+      "raise to 80"
+    ],
+    "solver_output": {
+      "recommended_action": "call 20",
+      "action_frequencies": {
+        "fold": 0.0,
+        "call 20": 0.9,
+        "raise to 80": 0.1
+      },
+      "equity": 1.0,
+      "pot_odds": "2.5:1",
+      "ev": 50.0
+    }
+  },
+  {
+    "id": "s016",
+    "game_state": {
+      "hand": "Kh Qh",
+      "board": "Ah 7h 2d 3c",
+      "pot": 80.0,
+      "stack": 150.0,
+      "position": "MP",
+      "street": "turn",
+      "villain_action": "bets 50"
+    },
+    "legal_actions": [
+      "fold",
+      "call 50",
+      "raise to 150"
+    ],
+    "solver_output": {
+      "recommended_action": "call 50",
+      "action_frequencies": {
+        "fold": 0.1,
+        "call 50": 0.85,
+        "raise to 150": 0.05
+      },
+      "equity": 0.2,
+      "pot_odds": "2.6:1",
+      "ev": -5.0
+    }
+  },
+  {
+    "id": "s017",
+    "game_state": {
+      "hand": "Ad As",
+      "board": "Kd 7c 3s 2h",
+      "pot": 100.0,
+      "stack": 140.0,
+      "position": "CO",
+      "street": "turn",
+      "villain_action": "bets 40"
+    },
+    "legal_actions": [
+      "fold",
+      "call 40",
+      "raise to 140"
+    ],
+    "solver_output": {
+      "recommended_action": "call 40",
+      "action_frequencies": {
+        "fold": 0.0,
+        "call 40": 0.7,
+        "raise to 140": 0.3
+      },
+      "equity": 0.85,
+      "pot_odds": "3.5:1",
+      "ev": 64.0
+    }
+  },
+  {
+    "id": "s018",
+    "game_state": {
+      "hand": "9c Tc",
+      "board": "Ad Qd 9s 7c 5h",
+      "pot": 120.0,
+      "stack": 200.0,
+      "position": "BTN",
+      "street": "river",
+      "villain_action": "checks"
+    },
+    "legal_actions": [
+      "check",
+      "bet 60"
+    ],
+    "solver_output": {
+      "recommended_action": "check",
+      "action_frequencies": {
+        "check": 0.95,
+        "bet 60": 0.05
+      },
+      "equity": 0.55,
+      "pot_odds": "N/A",
+      "ev": 66.0
+    }
+  },
+  {
+    "id": "s019",
+    "game_state": {
+      "hand": "Qc Qs",
+      "board": "Qd 8s 4h Jh 2c",
+      "pot": 100.0,
+      "stack": 240.0,
+      "position": "SB",
+      "street": "river",
+      "villain_action": "bets 60"
+    },
+    "legal_actions": [
+      "fold",
+      "call 60",
+      "raise to 240"
+    ],
+    "solver_output": {
+      "recommended_action": "raise to 240",
+      "action_frequencies": {
+        "fold": 0.0,
+        "call 60": 0.2,
+        "raise to 240": 0.8
+      },
+      "equity": 0.98,
+      "pot_odds": "2.67:1",
+      "ev": 180.0
+    }
+  },
+  {
+    "id": "s020",
+    "game_state": {
+      "hand": "7h 8h",
+      "board": "6h 9d Qh",
+      "pot": 40.0,
+      "stack": 120.0,
+      "position": "SB",
+      "street": "flop",
+      "villain_action": "bets 20"
+    },
+    "legal_actions": [
+      "fold",
+      "call 20",
+      "raise to 80"
+    ],
+    "solver_output": {
+      "recommended_action": "call 20",
+      "action_frequencies": {
+        "fold": 0.05,
+        "call 20": 0.7,
+        "raise to 80": 0.25
+      },
+      "equity": 0.58,
+      "pot_odds": "3:1",
+      "ev": 26.4
+    }
+  },
+  {
+    "id": "s021",
+    "game_state": {
+      "hand": "Kd Tc",
+      "board": "Ks 7c 3d 2h 9d",
+      "pot": 30.0,
+      "stack": 25.0,
+      "position": "UTG",
+      "street": "river",
+      "villain_action": "checks"
+    },
+    "legal_actions": [
+      "check",
+      "bet 25"
+    ],
+    "solver_output": {
+      "recommended_action": "check",
+      "action_frequencies": {
+        "check": 0.85,
+        "bet 25": 0.15
+      },
+      "equity": 0.7,
+      "pot_odds": "N/A",
+      "ev": 21.0
+    }
+  },
+  {
+    "id": "s022",
+    "game_state": {
+      "hand": "As Kd",
+      "board": "",
+      "pot": 10.0,
+      "stack": 200.0,
+      "position": "BTN",
+      "street": "preflop",
+      "villain_action": "raises to 30"
+    },
+    "legal_actions": [
+      "fold",
+      "call 30",
+      "raise to 90"
+    ],
+    "solver_output": {
+      "recommended_action": "raise to 90",
+      "action_frequencies": {
+        "fold": 0.05,
+        "call 30": 0.3,
+        "raise to 90": 0.65
+      },
+      "equity": 0.65,
+      "pot_odds": "1.33:1",
+      "ev": 18.0
+    }
+  },
+  {
+    "id": "s023",
+    "game_state": {
+      "hand": "7h 8h",
+      "board": "9h Th 2d",
+      "pot": 60.0,
+      "stack": 150.0,
+      "position": "SB",
+      "street": "flop",
+      "villain_action": "bets 40"
+    },
+    "legal_actions": [
+      "fold",
+      "call 40",
+      "raise to 120"
+    ],
+    "solver_output": {
+      "recommended_action": "call 40",
+      "action_frequencies": {
+        "fold": 0.1,
+        "call 40": 0.75,
+        "raise to 120": 0.15
+      },
+      "equity": 0.62,
+      "pot_odds": "2.50:1",
+      "ev": 11.0
+    }
+  },
+  {
+    "id": "s024",
+    "game_state": {
+      "hand": "Qc Qs",
+      "board": "Qd 5h 9c 2s",
+      "pot": 120.0,
+      "stack": 180.0,
+      "position": "BB",
+      "street": "turn",
+      "villain_action": "bets 100"
+    },
+    "legal_actions": [
+      "fold",
+      "call 100",
+      "raise to 180"
+    ],
+    "solver_output": {
+      "recommended_action": "raise to 180",
+      "action_frequencies": {
+        "fold": 0.02,
+        "call 100": 0.2,
+        "raise to 180": 0.78
+      },
+      "equity": 0.88,
+      "pot_odds": "2.20:1",
+      "ev": 60.0
+    }
+  },
+  {
+    "id": "s025",
+    "game_state": {
+      "hand": "Ah Ad",
+      "board": "Ks Kd 7c 4s 2h",
+      "pot": 200.0,
+      "stack": 300.0,
+      "position": "CO",
+      "street": "river",
+      "villain_action": "bets 50"
+    },
+    "legal_actions": [
+      "fold",
+      "call 50",
+      "raise to 200"
+    ],
+    "solver_output": {
+      "recommended_action": "raise to 200",
+      "action_frequencies": {
+        "fold": 0.0,
+        "call 50": 0.21,
+        "raise to 200": 0.79
+      },
+      "equity": 0.95,
+      "pot_odds": "5.00:1",
+      "ev": 80.0
+    }
+  },
+  {
+    "id": "s026",
+    "game_state": {
+      "hand": "9s 9d",
+      "board": "",
+      "pot": 8.0,
+      "stack": 30.0,
+      "position": "MP",
+      "street": "preflop",
+      "villain_action": "raises to 20"
+    },
+    "legal_actions": [
+      "fold",
+      "call 20",
+      "raise to 30"
+    ],
+    "solver_output": {
+      "recommended_action": "call 20",
+      "action_frequencies": {
+        "fold": 0.2,
+        "call 20": 0.7,
+        "raise to 30": 0.1
+      },
+      "equity": 0.58,
+      "pot_odds": "1.40:1",
+      "ev": 4.0
+    }
+  },
+  {
+    "id": "s027",
+    "game_state": {
+      "hand": "Ad 5d",
+      "board": "Kd 7h 2c",
+      "pot": 50.0,
+      "stack": 140.0,
+      "position": "UTG",
+      "street": "flop",
+      "villain_action": "checks"
+    },
+    "legal_actions": [
+      "check",
+      "bet 35"
+    ],
+    "solver_output": {
+      "recommended_action": "check",
+      "action_frequencies": {
+        "check": 0.9,
+        "bet 35": 0.1
+      },
+      "equity": 0.35,
+      "pot_odds": "N/A",
+      "ev": 0.8
+    }
+  },
+  {
+    "id": "s028",
+    "game_state": {
+      "hand": "Th Jc",
+      "board": "9s 8d 2c Ts",
+      "pot": 80.0,
+      "stack": 120.0,
+      "position": "BTN",
+      "street": "turn",
+      "villain_action": "bets 40"
+    },
+    "legal_actions": [
+      "fold",
+      "call 40",
+      "raise to 120"
+    ],
+    "solver_output": {
+      "recommended_action": "call 40",
+      "action_frequencies": {
+        "fold": 0.1,
+        "call 40": 0.7,
+        "raise to 120": 0.2
+      },
+      "equity": 0.65,
+      "pot_odds": "3.00:1",
+      "ev": 10.0
+    }
+  },
+  {
+    "id": "s029",
+    "game_state": {
+      "hand": "Jd Tc",
+      "board": "9s Th 2h 6d 3c",
+      "pot": 100.0,
+      "stack": 80.0,
+      "position": "SB",
+      "street": "river",
+      "villain_action": "bets 60"
+    },
+    "legal_actions": [
+      "fold",
+      "call 60",
+      "raise to 80"
+    ],
+    "solver_output": {
+      "recommended_action": "call 60",
+      "action_frequencies": {
+        "fold": 0.25,
+        "call 60": 0.6,
+        "raise to 80": 0.15
+      },
+      "equity": 0.55,
+      "pot_odds": "2.67:1",
+      "ev": 4.0
+    }
+  },
+  {
+    "id": "s030",
+    "game_state": {
+      "hand": "5c 4c",
+      "board": "",
+      "pot": 6.0,
+      "stack": 120.0,
+      "position": "BB",
+      "street": "preflop",
+      "villain_action": "raises to 18"
+    },
+    "legal_actions": [
+      "fold",
+      "call 18",
+      "raise to 54"
+    ],
+    "solver_output": {
+      "recommended_action": "fold",
+      "action_frequencies": {
+        "fold": 0.7,
+        "call 18": 0.25,
+        "raise to 54": 0.05
+      },
+      "equity": 0.33,
+      "pot_odds": "1.33:1",
+      "ev": -6.0
+    }
+  },
+  {
+    "id": "s031",
+    "game_state": {
+      "hand": "Ks Qs",
+      "board": "Ah Kh 2s",
+      "pot": 140.0,
+      "stack": 300.0,
+      "position": "CO",
+      "street": "flop",
+      "villain_action": "bets 60"
+    },
+    "legal_actions": [
+      "fold",
+      "call 60",
+      "raise to 180"
+    ],
+    "solver_output": {
+      "recommended_action": "raise to 180",
+      "action_frequencies": {
+        "fold": 0.05,
+        "call 60": 0.25,
+        "raise to 180": 0.7
+      },
+      "equity": 0.7,
+      "pot_odds": "3.33:1",
+      "ev": 45.0
+    }
+  },
+  {
+    "id": "s032",
+    "game_state": {
+      "hand": "8d 7d",
+      "board": "5d 6d 2h 9c",
+      "pot": 120.0,
+      "stack": 200.0,
+      "position": "MP",
+      "street": "turn",
+      "villain_action": "bets 70"
+    },
+    "legal_actions": [
+      "fold",
+      "call 70",
+      "raise to 200"
+    ],
+    "solver_output": {
+      "recommended_action": "raise to 200",
+      "action_frequencies": {
+        "fold": 0.01,
+        "call 70": 0.12,
+        "raise to 200": 0.87
+      },
+      "equity": 0.92,
+      "pot_odds": "2.71:1",
+      "ev": 60.0
+    }
+  },
+  {
+    "id": "s033",
+    "game_state": {
+      "hand": "Ah Qh",
+      "board": "",
+      "pot": 12.0,
+      "stack": 60.0,
+      "position": "BTN",
+      "street": "preflop",
+      "villain_action": "raises to 18"
+    },
+    "legal_actions": [
+      "fold",
+      "call 18",
+      "raise to 54"
+    ],
+    "solver_output": {
+      "recommended_action": "call 18",
+      "action_frequencies": {
+        "fold": 0.15,
+        "call 18": 0.75,
+        "raise to 54": 0.1
+      },
+      "equity": 0.48,
+      "pot_odds": "1.56:1",
+      "ev": 6.0
+    }
+  },
+  {
+    "id": "s034",
+    "game_state": {
+      "hand": "4s 4h",
+      "board": "4d Tc 9h",
+      "pot": 80.0,
+      "stack": 50.0,
+      "position": "SB",
+      "street": "flop",
+      "villain_action": "bets 30"
+    },
+    "legal_actions": [
+      "fold",
+      "call 30",
+      "raise to 50"
+    ],
+    "solver_output": {
+      "recommended_action": "raise to 50",
+      "action_frequencies": {
+        "fold": 0.01,
+        "call 30": 0.2,
+        "raise to 50": 0.79
+      },
+      "equity": 0.92,
+      "pot_odds": "3.67:1",
+      "ev": 25.0
+    }
+  },
+  {
+    "id": "s035",
+    "game_state": {
+      "hand": "5h 5d",
+      "board": "5c 8s 9d 6h",
+      "pot": 120.0,
+      "stack": 100.0,
+      "position": "BB",
+      "street": "turn",
+      "villain_action": "bets 40"
+    },
+    "legal_actions": [
+      "fold",
+      "call 40",
+      "raise to 100"
+    ],
+    "solver_output": {
+      "recommended_action": "raise to 100",
+      "action_frequencies": {
+        "fold": 0.02,
+        "call 40": 0.18,
+        "raise to 100": 0.8
+      },
+      "equity": 0.9,
+      "pot_odds": "4.00:1",
+      "ev": 45.0
+    }
+  },
+  {
+    "id": "s036",
+    "game_state": {
+      "hand": "Qs 9s",
+      "board": "Jd Ts 3c 7h 2d",
+      "pot": 90.0,
+      "stack": 150.0,
+      "position": "CO",
+      "street": "river",
+      "villain_action": "bets 30"
+    },
+    "legal_actions": [
+      "fold",
+      "call 30"
+    ],
+    "solver_output": {
+      "recommended_action": "fold",
+      "action_frequencies": {
+        "fold": 0.88,
+        "call 30": 0.12
+      },
+      "equity": 0.22,
+      "pot_odds": "4.00:1",
+      "ev": -10.0
+    }
+  },
+  {
+    "id": "s037",
+    "game_state": {
+      "hand": "Jh Jc",
+      "board": "",
+      "pot": 6.0,
+      "stack": 140.0,
+      "position": "MP",
+      "street": "preflop",
+      "villain_action": "raises to 24"
+    },
+    "legal_actions": [
+      "fold",
+      "call 24",
+      "raise to 72"
+    ],
+    "solver_output": {
+      "recommended_action": "raise to 72",
+      "action_frequencies": {
+        "fold": 0.03,
+        "call 24": 0.2,
+        "raise to 72": 0.77
+      },
+      "equity": 0.7,
+      "pot_odds": "1.25:1",
+      "ev": 30.0
+    }
+  },
+  {
+    "id": "s038",
+    "game_state": {
+      "hand": "Ac 4c",
+      "board": "Ad Kd 7s",
+      "pot": 140.0,
+      "stack": 70.0,
+      "position": "UTG",
+      "street": "flop",
+      "villain_action": "bets 50"
+    },
+    "legal_actions": [
+      "fold",
+      "call 50",
+      "raise to 70"
+    ],
+    "solver_output": {
+      "recommended_action": "call 50",
+      "action_frequencies": {
+        "fold": 0.2,
+        "call 50": 0.7,
+        "raise to 70": 0.1
+      },
+      "equity": 0.7,
+      "pot_odds": "3.80:1",
+      "ev": 15.0
+    }
+  },
+  {
+    "id": "s039",
+    "game_state": {
+      "hand": "Ah 7h",
+      "board": "Kd 2h 9c Js",
+      "pot": 160.0,
+      "stack": 140.0,
+      "position": "BTN",
+      "street": "turn",
+      "villain_action": "bets 40"
+    },
+    "legal_actions": [
+      "fold",
+      "call 40",
+      "raise to 140"
+    ],
+    "solver_output": {
+      "recommended_action": "call 40",
+      "action_frequencies": {
+        "fold": 0.25,
+        "call 40": 0.65,
+        "raise to 140": 0.1
+      },
+      "equity": 0.19,
+      "pot_odds": "5.00:1",
+      "ev": 3.0
+    }
+  },
+  {
+    "id": "s040",
+    "game_state": {
+      "hand": "9d 9h",
+      "board": "Ah Kh Qh 2c 7s",
+      "pot": 160.0,
+      "stack": 120.0,
+      "position": "SB",
+      "street": "river",
+      "villain_action": "bets 90"
+    },
+    "legal_actions": [
+      "fold",
+      "call 90"
+    ],
+    "solver_output": {
+      "recommended_action": "call 90",
+      "action_frequencies": {
+        "fold": 0.35,
+        "call 90": 0.65
+      },
+      "equity": 0.57,
+      "pot_odds": "2.78:1",
+      "ev": -2.0
+    }
+  },
+  {
+    "id": "s041",
+    "game_state": {
+      "hand": "8h 9h",
+      "board": "Th 7d 6h",
+      "pot": 40.0,
+      "stack": 150.0,
+      "position": "CO",
+      "street": "flop",
+      "villain_action": "checks"
+    },
+    "legal_actions": [
+      "check",
+      "bet 30"
+    ],
+    "solver_output": {
+      "recommended_action": "check",
+      "action_frequencies": {
+        "check": 0.9,
+        "bet 30": 0.1
+      },
+      "equity": 0.92,
+      "pot_odds": "N/A",
+      "ev": 12.3
+    }
+  },
+  {
+    "id": "s042",
+    "game_state": {
+      "hand": "Ah Kh",
+      "board": "",
+      "pot": 3.0,
+      "stack": 150.0,
+      "position": "BTN",
+      "street": "preflop",
+      "villain_action": "raises to 12"
+    },
+    "legal_actions": [
+      "fold",
+      "call 12",
+      "raise to 36"
+    ],
+    "solver_output": {
+      "recommended_action": "raise to 36",
+      "action_frequencies": {
+        "fold": 0.05,
+        "call 12": 0.25,
+        "raise to 36": 0.7
+      },
+      "equity": 0.66,
+      "pot_odds": "1.25:1",
+      "ev": 18.4
+    }
+  },
+  {
+    "id": "s043",
+    "game_state": {
+      "hand": "7d 6d",
+      "board": "Js Tc 2s",
+      "pot": 40.0,
+      "stack": 80.0,
+      "position": "SB",
+      "street": "flop",
+      "villain_action": "bets 25"
+    },
+    "legal_actions": [
+      "fold",
+      "call 25",
+      "raise to 80"
+    ],
+    "solver_output": {
+      "recommended_action": "call 25",
+      "action_frequencies": {
+        "fold": 0.12,
+        "call 25": 0.78,
+        "raise to 80": 0.1
+      },
+      "equity": 0.42,
+      "pot_odds": "2.6:1",
+      "ev": 3.9
+    }
+  },
+  {
+    "id": "s044",
+    "game_state": {
+      "hand": "9h 9s",
+      "board": "Kd Th 2h",
+      "pot": 30.0,
+      "stack": 200.0,
+      "position": "CO",
+      "street": "flop",
+      "villain_action": "checks"
+    },
+    "legal_actions": [
+      "check",
+      "bet 20"
+    ],
+    "solver_output": {
+      "recommended_action": "bet 20",
+      "action_frequencies": {
+        "check": 0.3,
+        "bet 20": 0.7
+      },
+      "equity": 0.55,
+      "pot_odds": "N/A",
+      "ev": 7.5
+    }
+  },
+  {
+    "id": "s045",
+    "game_state": {
+      "hand": "As 5s",
+      "board": "Ah Kh Qs Jd",
+      "pot": 120.0,
+      "stack": 110.0,
+      "position": "MP",
+      "street": "turn",
+      "villain_action": "bets 40"
+    },
+    "legal_actions": [
+      "fold",
+      "call 40",
+      "raise to 110"
+    ],
+    "solver_output": {
+      "recommended_action": "call 40",
+      "action_frequencies": {
+        "fold": 0.2,
+        "call 40": 0.65,
+        "raise to 110": 0.15
+      },
+      "equity": 0.39,
+      "pot_odds": "4.00:1",
+      "ev": -2.8
+    }
+  },
+  {
+    "id": "s046",
+    "game_state": {
+      "hand": "Kc Tc",
+      "board": "9c 8c 2d 4s",
+      "pot": 60.0,
+      "stack": 25.0,
+      "position": "UTG",
+      "street": "turn",
+      "villain_action": "bets 20"
+    },
+    "legal_actions": [
+      "fold",
+      "call 20"
+    ],
+    "solver_output": {
+      "recommended_action": "call 20",
+      "action_frequencies": {
+        "fold": 0.35,
+        "call 20": 0.65
+      },
+      "equity": 0.48,
+      "pot_odds": "4.00:1",
+      "ev": 1.6
+    }
+  },
+  {
+    "id": "s047",
+    "game_state": {
+      "hand": "4h 4d",
+      "board": "4c 9s Kd",
+      "pot": 45.0,
+      "stack": 300.0,
+      "position": "BTN",
+      "street": "flop",
+      "villain_action": "bets 30"
+    },
+    "legal_actions": [
+      "fold",
+      "call 30",
+      "raise to 120"
+    ],
+    "solver_output": {
+      "recommended_action": "raise to 120",
+      "action_frequencies": {
+        "fold": 0.01,
+        "call 30": 0.09,
+        "raise to 120": 0.9
+      },
+      "equity": 0.92,
+      "pot_odds": "2.5:1",
+      "ev": 38.0
+    }
+  },
+  {
+    "id": "s048",
+    "game_state": {
+      "hand": "Td 9d",
+      "board": "Ad Qd 7d 3h",
+      "pot": 80.0,
+      "stack": 120.0,
+      "position": "SB",
+      "street": "turn",
+      "villain_action": "checks"
+    },
+    "legal_actions": [
+      "check",
+      "bet 60"
+    ],
+    "solver_output": {
+      "recommended_action": "check",
+      "action_frequencies": {
+        "check": 0.85,
+        "bet 60": 0.15
+      },
+      "equity": 0.34,
+      "pot_odds": "N/A",
+      "ev": -1.2
+    }
+  },
+  {
+    "id": "s049",
+    "game_state": {
+      "hand": "Ad Qd",
+      "board": "Ks Qc 2h",
+      "pot": 50.0,
+      "stack": 75.0,
+      "position": "MP",
+      "street": "flop",
+      "villain_action": "bets 35"
+    },
+    "legal_actions": [
+      "fold",
+      "call 35",
+      "raise to 75"
+    ],
+    "solver_output": {
+      "recommended_action": "raise to 75",
+      "action_frequencies": {
+        "fold": 0.1,
+        "call 35": 0.25,
+        "raise to 75": 0.65
+      },
+      "equity": 0.71,
+      "pot_odds": "2.43:1",
+      "ev": 12.7
+    }
+  },
+  {
+    "id": "s050",
+    "game_state": {
+      "hand": "8s 7s",
+      "board": "9s Ts 2c 6d",
+      "pot": 100.0,
+      "stack": 250.0,
+      "position": "BB",
+      "street": "turn",
+      "villain_action": "bets 60"
+    },
+    "legal_actions": [
+      "fold",
+      "call 60",
+      "raise to 200"
+    ],
+    "solver_output": {
+      "recommended_action": "call 60",
+      "action_frequencies": {
+        "fold": 0.15,
+        "call 60": 0.8,
+        "raise to 200": 0.05
+      },
+      "equity": 0.46,
+      "pot_odds": "2.67:1",
+      "ev": 4.8
+    }
+  },
+  {
+    "id": "s051",
+    "game_state": {
+      "hand": "Ks Qs",
+      "board": "Ah Kh Qd Js 2c",
+      "pot": 160.0,
+      "stack": 60.0,
+      "position": "UTG",
+      "street": "river",
+      "villain_action": "bets 40"
+    },
+    "legal_actions": [
+      "fold",
+      "call 40"
+    ],
+    "solver_output": {
+      "recommended_action": "call 40",
+      "action_frequencies": {
+        "fold": 0.22,
+        "call 40": 0.78
+      },
+      "equity": 0.88,
+      "pot_odds": "5.00:1",
+      "ev": 10.4
+    }
+  },
+  {
+    "id": "s052",
+    "game_state": {
+      "hand": "2c 3c",
+      "board": "4c 5d 9h",
+      "pot": 20.0,
+      "stack": 18.0,
+      "position": "CO",
+      "street": "flop",
+      "villain_action": "bets 15"
+    },
+    "legal_actions": [
+      "fold",
+      "call 15"
+    ],
+    "solver_output": {
+      "recommended_action": "fold",
+      "action_frequencies": {
+        "fold": 0.75,
+        "call 15": 0.25
+      },
+      "equity": 0.23,
+      "pot_odds": "2.33:1",
+      "ev": -6.1
+    }
+  },
+  {
+    "id": "s053",
+    "game_state": {
+      "hand": "Qc Jc",
+      "board": "Tc 8c 2c 3d",
+      "pot": 90.0,
+      "stack": 90.0,
+      "position": "BTN",
+      "street": "turn",
+      "villain_action": "bets 30"
+    },
+    "legal_actions": [
+      "fold",
+      "call 30",
+      "raise to 90"
+    ],
+    "solver_output": {
+      "recommended_action": "raise to 90",
+      "action_frequencies": {
+        "fold": 0.05,
+        "call 30": 0.2,
+        "raise to 90": 0.75
+      },
+      "equity": 0.97,
+      "pot_odds": "4.00:1",
+      "ev": 25.2
+    }
+  },
+  {
+    "id": "s054",
+    "game_state": {
+      "hand": "Ah 4h",
+      "board": "Kh Th 6h 2s",
+      "pot": 50.0,
+      "stack": 55.0,
+      "position": "MP",
+      "street": "turn",
+      "villain_action": "bets 25"
+    },
+    "legal_actions": [
+      "fold",
+      "call 25",
+      "raise to 55"
+    ],
+    "solver_output": {
+      "recommended_action": "call 25",
+      "action_frequencies": {
+        "fold": 0.18,
+        "call 25": 0.75,
+        "raise to 55": 0.07
+      },
+      "equity": 0.6,
+      "pot_odds": "3.00:1",
+      "ev": 5.5
+    }
+  },
+  {
+    "id": "s055",
+    "game_state": {
+      "hand": "Ts 9h",
+      "board": "Jd Qc 8s 7h 2d",
+      "pot": 140.0,
+      "stack": 30.0,
+      "position": "BB",
+      "street": "river",
+      "villain_action": "bets 30"
+    },
+    "legal_actions": [
+      "fold",
+      "call 30"
+    ],
+    "solver_output": {
+      "recommended_action": "fold",
+      "action_frequencies": {
+        "fold": 0.65,
+        "call 30": 0.35
+      },
+      "equity": 0.18,
+      "pot_odds": "5.67:1",
+      "ev": -8.7
+    }
+  },
+  {
+    "id": "s056",
+    "game_state": {
+      "hand": "Ac Kc",
+      "board": "Qh Jh Tc 9d",
+      "pot": 200.0,
+      "stack": 500.0,
+      "position": "CO",
+      "street": "turn",
+      "villain_action": "bets 150"
+    },
+    "legal_actions": [
+      "fold",
+      "call 150",
+      "raise to 450"
+    ],
+    "solver_output": {
+      "recommended_action": "fold",
+      "action_frequencies": {
+        "fold": 0.6,
+        "call 150": 0.3,
+        "raise to 450": 0.1
+      },
+      "equity": 0.27,
+      "pot_odds": "2.33:1",
+      "ev": -45.0
+    }
+  },
+  {
+    "id": "s057",
+    "game_state": {
+      "hand": "7s 7c",
+      "board": "7d 5h 2s",
+      "pot": 35.0,
+      "stack": 65.0,
+      "position": "UTG",
+      "street": "flop",
+      "villain_action": "bets 20"
+    },
+    "legal_actions": [
+      "fold",
+      "call 20",
+      "raise to 65"
+    ],
+    "solver_output": {
+      "recommended_action": "raise to 65",
+      "action_frequencies": {
+        "fold": 0.02,
+        "call 20": 0.08,
+        "raise to 65": 0.9
+      },
+      "equity": 0.94,
+      "pot_odds": "2.75:1",
+      "ev": 24.5
+    }
+  },
+  {
+    "id": "s058",
+    "game_state": {
+      "hand": "9c 9d",
+      "board": "Tc Jh Qs Kd 2h",
+      "pot": 120.0,
+      "stack": 40.0,
+      "position": "SB",
+      "street": "river",
+      "villain_action": "bets 40"
+    },
+    "legal_actions": [
+      "fold",
+      "call 40"
+    ],
+    "solver_output": {
+      "recommended_action": "fold",
+      "action_frequencies": {
+        "fold": 0.88,
+        "call 40": 0.12
+      },
+      "equity": 0.12,
+      "pot_odds": "4.00:1",
+      "ev": -8.8
+    }
+  },
+  {
+    "id": "s059",
+    "game_state": {
+      "hand": "Jd 8d",
+      "board": "Qd 9d 2d 5c 3h",
+      "pot": 60.0,
+      "stack": 120.0,
+      "position": "BTN",
+      "street": "river",
+      "villain_action": "checks"
+    },
+    "legal_actions": [
+      "check",
+      "bet 45"
+    ],
+    "solver_output": {
+      "recommended_action": "bet 45",
+      "action_frequencies": {
+        "check": 0.1,
+        "bet 45": 0.9
+      },
+      "equity": 0.92,
+      "pot_odds": "N/A",
+      "ev": 55.2
+    }
+  },
+  {
+    "id": "s060",
+    "game_state": {
+      "hand": "5h 6h",
+      "board": "",
+      "pot": 1.0,
+      "stack": 15.0,
+      "position": "MP",
+      "street": "preflop",
+      "villain_action": "raises to 3"
+    },
+    "legal_actions": [
+      "fold",
+      "call 3"
+    ],
+    "solver_output": {
+      "recommended_action": "fold",
+      "action_frequencies": {
+        "fold": 0.92,
+        "call 3": 0.08
+      },
+      "equity": 0.38,
+      "pot_odds": "1.33:1",
+      "ev": -1.1
+    }
+  },
+  {
+    "id": "s061",
+    "game_state": {
+      "hand": "Ad Js",
+      "board": "Kc 9d 7h 3s 2c",
+      "pot": 60.0,
+      "stack": 120.0,
+      "position": "SB",
+      "street": "river",
+      "villain_action": "checks"
+    },
+    "legal_actions": [
+      "check",
+      "bet 30"
+    ],
+    "solver_output": {
+      "recommended_action": "check",
+      "action_frequencies": {
+        "check": 0.95,
+        "bet 30": 0.05
+      },
+      "equity": 0.32,
+      "pot_odds": "N/A",
+      "ev": 19.2
+    }
+  }
+]

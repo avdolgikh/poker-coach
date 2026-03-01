@@ -1,0 +1,6 @@
+__pycache__/
+.env
+.venv/
+uv.lock
+prompts/v[1-9]*
+prompts/*_meta.json
