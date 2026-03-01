@@ -7,8 +7,8 @@ A system that automatically improves its own coaching prompts. It generates poke
 ```
                     ┌─────────────┐
                     │  Coaching   │
-  Scenario ──────► │   Agent     │ ──────► CoachingOutput
-  + Prompt         │  (LLM)      │         (action + explanation)
+  Scenario ──────►  │   Agent     │ ──────► CoachingOutput
+  + Prompt          │  (LLM)      │         (action + explanation)
                     └─────────────┘
                           │
                           ▼
@@ -132,5 +132,5 @@ tests/                     Tests covering gates, heuristics, pipeline, validatio
 
 **Production path:**
 - Adopt an agentic framework (LangGraph, Google ADK, CrewAI) to reduce boilerplate once the core logic stabilizes.
-- Fine-tune the coaching LLM if prompt optimization plateaus. The evaluation framework already produces scored examples that can serve as training data.
+- As the last resort, fine-tune the coaching LLM if prompt optimization plateaus. The evaluation framework already produces scored examples that can serve as training data.
 - Collect implicit user feedback in production (e.g., which coaching explanations users engage with) to continuously improve the training set without manual annotation.
