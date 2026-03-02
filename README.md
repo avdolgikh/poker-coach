@@ -131,6 +131,7 @@ tests/                     Tests covering gates, heuristics, pipeline, validatio
 - Use a small set of real human annotations for holdout validation — even 10-20 expert-reviewed scenarios would sharpen the signal.
 
 **Production path:**
+- Iterate on the avalable open-source LLMs - to pick the best for the task.
 - Adopt an agentic framework (LangGraph, Google ADK, CrewAI) to reduce boilerplate once the core logic stabilizes.
 - As the last resort, fine-tune the coaching LLM if prompt optimization plateaus. The evaluation framework already produces scored examples that can serve as training data.
 - Collect implicit user feedback in production (e.g., which coaching explanations users engage with) to continuously improve the training set without manual annotation.
