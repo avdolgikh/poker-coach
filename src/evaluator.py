@@ -273,3 +273,48 @@ def evaluate(
         judge=judge_scores,
         composite=composite,
     )
+
+
+# --- Soft-gate scoring (for DSPy engines — partial credit when gates fail) ---
+
+def compute_composite_soft(gates: GateResults, rule_based: RuleBasedScores,
+                           judge: JudgeScores | None = None) -> float:
+    """Weighted composite with fractional gate credit instead of hard zeroing."""
+    gate_fraction = sum(1 for g in gates.gates if g.passed) / len(gates.gates)
+
+    if judge is not None:
+        result = (config.SOFT_GATE_WEIGHT * gate_fraction
+                  + config.SOFT_HEURISTIC_WEIGHT * rule_based.composite
+                  + config.SOFT_JUDGE_WEIGHT * judge.normalized_avg())
+    else:
+        result = (config.SOFT_GATE_WEIGHT_NO_JUDGE * gate_fraction
+                  + config.SOFT_HEURISTIC_WEIGHT_NO_JUDGE * rule_based.composite)
+
+    return max(0.01, result)
+
+
+def evaluate_soft(
+    scenario: Scenario,
+    output: CoachingOutput,
+    judge_scores: JudgeScores | None = None,
+    full_eval: bool = False,
+) -> EvalResult:
+    """Soft-gate evaluation: always computes heuristics, partial credit for gate failures."""
+    gates = run_gates(scenario, output)
+
+    if full_eval:
+        rule_based = compute_rule_based_full(scenario, output)
+    else:
+        rule_based = compute_rule_based_cheap(scenario, output)
+
+    # Judge scores only applied when all gates pass
+    judge = judge_scores if gates.all_passed else None
+    composite = compute_composite_soft(gates, rule_based, judge)
+
+    return EvalResult(
+        scenario_id=scenario.id,
+        gates=gates,
+        rule_based=rule_based,
+        judge=judge,
+        composite=composite,
+    )

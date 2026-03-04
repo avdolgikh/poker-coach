@@ -34,6 +34,15 @@ CHEAP_HEURISTIC_WEIGHTS = {
     "position_awareness": 0.25,
 }
 
+# Soft-gate weights (DSPy engines — partial credit)
+SOFT_GATE_WEIGHT = 0.30
+SOFT_HEURISTIC_WEIGHT = 0.45
+SOFT_JUDGE_WEIGHT = 0.25
+SOFT_GATE_WEIGHT_NO_JUDGE = 0.35
+SOFT_HEURISTIC_WEIGHT_NO_JUDGE = 0.65
+
+DSPY_PROGRAMS_DIR = Path(__file__).resolve().parent.parent / "dspy_programs"
+
 # Hard gates — all must pass or composite = 0.0
 GATES = [
     {"name": "legality", "rule": "recommended action must be in the scenario's legal_actions list (case-insensitive)"},
@@ -52,6 +61,10 @@ FORMAT_LENGTH_PENALTIES = [
 ]
 FORMAT_MISSING_ACTION_PENALTY: float = 0.2
 FORMAT_TARGET_RANGE = (200, 500)
+
+# Data splits
+DSPY_TRAIN_FRAC: float = 0.6    # DSPy engines: fraction of annotated data for training
+EXAMPLES_POOL_FRAC: float = 0.1 # Manual engine: fraction of annotated data for examples pool
 
 # Pipeline
 NUM_ITERATIONS: int = 3
