@@ -74,15 +74,27 @@ cp .env.example .env
 ## Run
 
 ```bash
-# Full pipeline
-uv run python run.py
+# Full pipeline (manual engine is default)
+uv run python run.py --engine manual
 
 # Smaller run for quick testing
-uv run python run.py --train 5 --holdout 3
+uv run python run.py --engine manual --train 5 --holdout 3
 
 # Generate more training data
 uv run python -m src.generate_data 50 --solver-only
 ```
+
+## DSPy (optional)
+
+```bash
+uv run python run.py --engine gepa
+uv run python run.py --engine mipro
+
+uv run python run.py --engine gepa --no-judge
+uv run python run.py --engine mipro --no-judge
+```
+
+DSPy engines train on `scenarios-annotated.json` (60/40 train/holdout split) and save compiled programs to `dspy_programs/`.
 
 ## Tests
 
@@ -92,29 +104,33 @@ uv run pytest tests/ -v
 
 ## Design decisions
 
-**No agentic frameworks.** This POC intentionally avoids any agentic frameworks. The optimization loop is simple enough that the overhead of a framework would obscure the core logic. Every LLM call, every evaluation step, every prompt edit is explicit and traceable. In production, a framework could reduce boilerplate — but for a POC, full visibility matters more.
+**Explicit pipeline first.** The manual engine keeps every step visible and traceable. DSPy is integrated as an optional optimizer backend (`--engine gepa|mipro`).
 
 ## Project structure
 
 ```
-run.py                     Entry point — loads data, runs pipeline, prints results
+run.py                     Entry point - loads data, runs pipeline, prints results
 src/
   config.py                All configuration (models, weights, gates, paths)
   models.py                Pydantic data models (Scenario, CoachingOutput, EvalResult, etc.)
   llm.py                   LLM wrapper (OpenAI + Anthropic, structured output)
+  engine_protocol.py       OptimizationEngine protocol + EngineResult type
+  engine_manual.py         Manual iterative optimizer (v1/v2/v3 prompt versions)
+  engine_dspy.py           DSPy engines (GEPA, MIPROv2)
   coaching_agent.py        Generates coaching explanations for poker scenarios
   judge_agent.py           LLM-as-a-judge for communication quality (not strategy)
   evaluator.py             Hard gates + heuristic scoring + composite score
   optimizer_agent.py       Analyzes failures, proposes prompt edits
-  pipeline.py              Main optimization loop (train → evaluate → optimize → repeat)
+  pipeline.py              Main orchestration (baseline -> engine.optimize -> holdout)
   generate_data.py         LLM-powered scenario generation with validation
   prompt_store.py          Save/load/diff prompt versions
+dspy_programs/             Saved DSPy compiled programs
 data/
   scenarios.json           Solver-only training scenarios
   scenarios-annotated.json Annotated scenarios (holdout + examples)
 prompts/
   v0.txt                   Initial coaching prompt
-tests/                     Tests covering gates, heuristics, pipeline, validation
+tests/                     Tests for engines, evaluator, pipeline, validation
 ```
 
 ## Future directions
@@ -124,14 +140,16 @@ tests/                     Tests covering gates, heuristics, pipeline, validatio
 - Include a compressed poker rules reference in the prompt. The system currently relies on the LLM's built-in poker knowledge, which can hallucinate odds or misread board textures.
 
 **Optimization framework:**
-- Try [DSPy](https://github.com/stanfordnlp/dspy) as the optimization backbone. The current hand-rolled optimizer loop works, but DSPy is purpose-built for prompt tuning and could replace the optimizer agent with more principled search.
+- Benchmark GEPA vs MIPROv2 across larger train sets and tune optimizer settings (`auto`, demo counts, threads).
+- Expand DSPy metrics and feedback text to better target poker-specific weaknesses.
 
 **Data quality:**
 - Replace LLM-generated solver data with real solver outputs. The current synthetic data is plausible but not ground truth.
 - Use a small set of real human annotations for holdout validation — even 10-20 expert-reviewed scenarios would sharpen the signal.
 
 **Production path:**
-- Iterate on the avalable open-source LLMs - to pick the best for the task.
+- Iterate on the available open-source LLMs - to pick the best for the task.
 - Adopt an agentic framework (LangGraph, Google ADK, CrewAI) to reduce boilerplate once the core logic stabilizes.
 - As the last resort, fine-tune the coaching LLM if prompt optimization plateaus. The evaluation framework already produces scored examples that can serve as training data.
 - Collect implicit user feedback in production (e.g., which coaching explanations users engage with) to continuously improve the training set without manual annotation.
+
