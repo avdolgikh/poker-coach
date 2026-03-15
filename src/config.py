@@ -73,3 +73,53 @@ MAX_EDITS_PER_ITERATION: int = 3
 # Paths
 DATA_DIR = Path(__file__).resolve().parent.parent / "data"
 PROMPTS_DIR = Path(__file__).resolve().parent.parent / "prompts"
+
+# --- Failure Detector: Evidence Contract ---
+
+EVIDENCE_CONTRACT = {
+    "equity": {
+        "required_tool": "equity_calculator",
+        "verification_type": "numeric",
+        "tolerance": 0.02,
+        "output_field": "equity",
+        "required": True,
+    },
+    "pot_odds": {
+        "required_tool": "pot_odds_calculator",
+        "verification_type": "exact",
+        "output_field": "pot_odds",
+        "required": True,
+    },
+    "ev": {
+        "required_tool": "ev_calculator",
+        "verification_type": "numeric",
+        "tolerance": 5.0,
+        "output_field": "ev",
+        "required": False,
+    },
+    "action_frequency": {
+        "required_tool": "action_frequency_solver",
+        "verification_type": "action_frequency",
+        "tolerance": 0.05,
+        "output_field": "frequencies",
+        "required": False,
+    },
+    "recommended_action": {
+        "required_tool": "action_frequency_solver",
+        "verification_type": "categorical",
+        "output_field": "recommended_action",
+        "required": True,
+    },
+    "position": {
+        "required_tool": "position_analyzer",
+        "verification_type": "categorical",
+        "output_field": "position",
+        "required": False,
+    },
+    "board_texture": {
+        "required_tool": "board_texture_analyzer",
+        "verification_type": "semantic",
+        "output_field": "texture",
+        "required": False,
+    },
+}

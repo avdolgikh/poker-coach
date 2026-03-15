@@ -107,3 +107,60 @@ class PromptVersion(BaseModel):
     version: str
     prompt_text: str
     metadata: dict = {}
+
+
+# --- Failure Detector ---
+
+class ToolCall(BaseModel):
+    """A single tool invocation in the DA pipeline trace."""
+    tool_name: str
+    input: dict
+    output: dict
+
+
+class ToolTrace(BaseModel):
+    """Ordered sequence of tool calls for one hand."""
+    calls: list[ToolCall]
+
+
+class Claim(BaseModel):
+    """A factual claim extracted from coaching output."""
+    text: str
+    claim_type: str  # "numeric", "categorical", "action", "conceptual"
+    topic: str  # maps to evidence contract key
+
+
+class ClaimVerification(BaseModel):
+    """Result of verifying a single claim against a tool output."""
+    claim: Claim
+    matched_tool: str | None
+    verdict: str  # "supported", "contradicted", "unsupported", "unverifiable"
+    reasoning: str
+    severity: str  # "hard_fail", "soft_fail", "info"
+
+
+class FailureLabel(BaseModel):
+    """A single labeled failure (for ground truth or prediction)."""
+    failure_type: str  # "contradiction", "skipped_tool", "concept_misapplication"
+    claim_text: str | None = None
+    tool_name: str | None = None
+    detail: str
+
+
+class FailureVerdict(BaseModel):
+    """Complete failure detection result for one hand."""
+    claims: list[Claim]
+    verifications: list[ClaimVerification]
+    skipped_tools: list[str]
+    failures: list[FailureLabel]
+    has_hard_failure: bool
+    overall_pass: bool
+    summary: str
+
+
+class HandPackage(BaseModel):
+    """A hand with coaching output, tool trace, and optional ground truth."""
+    scenario_id: str
+    coaching_output: CoachingOutput
+    tool_trace: ToolTrace
+    labels: list[FailureLabel] | None = None
