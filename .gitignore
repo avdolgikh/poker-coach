@@ -5,3 +5,4 @@ agents.md
 uv.lock
 prompts/v[1-9]*
 prompts/*_meta.json
+data/eval-validation-package/

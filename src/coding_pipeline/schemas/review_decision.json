@@ -1,0 +1,27 @@
+﻿{
+  "type": "object",
+  "properties": {
+    "decision": {
+      "type": "string",
+      "enum": [
+        "approve",
+        "revise"
+      ]
+    },
+    "summary": {
+      "type": "string"
+    },
+    "blocking": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "decision",
+    "summary",
+    "blocking"
+  ],
+  "additionalProperties": false
+}
